@@ -87,8 +87,9 @@ def deletion(library):
     '''
     Performs deletion on the detected blurry iamges.
     '''
+    print("Loading..........")
     names, blur_maps, scores, labels = libraryDetection(library)
-    
+    print("Done with blur detection!")
     # sort the indices by score.
     idxs = {i:scores[i] for i in range(len(labels)) if labels[i]}
     sorted_idxs = sorted(idxs.keys(), key = lambda x : idxs[x])
