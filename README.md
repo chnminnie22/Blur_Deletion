@@ -38,7 +38,7 @@ A deterministic method of detecting the edges in a photograph is by performing a
 
 where g is the output image or map altered by the convolution, f is the input image given as a function of some property inherent to each pixel (e.g., brightness), and gamma is the kernel, typically provided as a 3-by-3 mask of values.
 
-A trivial example of convolution filtering at work is by applying the following kernel mask the an image:
+A trivial example of convolution filtering at work is by applying the following kernel mask:
 
 <p align="center">
  <img src="images/kernel.png" alt="image" width="200"/>
