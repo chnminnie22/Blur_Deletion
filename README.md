@@ -32,29 +32,33 @@ Once edge detection is performed on an image, the amount of sharp edges, roughly
 
 A deterministic method of detecting the edges in a photograph is by performing a convolution (in the mathematical sense, between two functions) between the image and a defined kernel, which outputs a map of the image’s edges. Convolution filtering is a common mathematical technique used for blurring, detecting edges, and more. In general, a convolution of two functions looks like so:
 
-<img src="images/convolution.png" alt="image" width="200"/>
-![image](images/convolution.png)
+<p align="center">
+ <img src="images/convolution.png" alt="image" width="200"/>
+</p>
 
 where g is the output image or map altered by the convolution, f is the input image given as a function of some property inherent to each pixel (e.g., brightness), and gamma is the kernel, typically provided as a 3-by-3 mask of values.
 
 A trivial example of convolution filtering at work is by applying the following kernel mask the an image:
 
-<img src="images/kernel.png" alt="image" width="200"/>
-![image](images/kernel.png)
+<p align="center">
+ <img src="images/kernel.png" alt="image" width="500"/>
+</p>
 
 When this kernel is used in convolution with an image, the output is exactly the same image. This “identity” kernel behaves this way because the convolution effectively covers every pixel in the image and multiplies its value by one, with no information about neighboring pixels being used.
 
 Therefore the concept can be extended to detecting edges in an image, with a kernel filter such as the following: 
 
-<img src="images/edge_kernel.png" alt="image" width="200"/>
-![image](images/edge_kernel.png)
+<p align="center">
+ <img src="images/edge_kernel.png" alt="image" width="200"/>
+</p>
 
 Such a filter as the one above would be able to detect edges in a photograph by weighting neighboring pixels inversely with respect to the center pixel. Therefore, the convolution returns greater values for those areas where sharp changes in the image occur, as the kernel effectively accentuates those discontinuities. 
 
 To perform edge detection for the purpose of classifying blurry images, there are several options for a kernel mask, including the one above. Another kernel, which represents a discrete, truncated approximation of the Laplace operator may be used:
 
-<img src="images/Laplace.png" alt="image" width="200"/>
-![image](images/Laplace.png)
+<p align="center">
+ <img src="images/Laplace.png" alt="image" width="200"/>
+</p>
 
 Part of our project included the testing of various kernel masks, and the discrete Laplace operator exhibits a strong capability for edge detection.
 
