@@ -25,4 +25,4 @@ Once this is run, the code processes the images, determines which images are blu
 
 `s`: deletes only the images that have been selected and keeps the rest in their original directory
 
-At the end of the image selection, the selected images will be displayed in a list, followed by a confirmation to delete all photos listed. If “y” is pressed, the photos will be deleted from the original image directory provided.
+At the end of the image selection, the selected images will be displayed in a list, followed by a confirmation to delete all photos listed. If `y` is pressed, the photos will be deleted from the original image directory provided.
