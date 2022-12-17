@@ -87,7 +87,7 @@ def deletion(library):
     '''
     Performs deletion on the detected blurry iamges.
     '''
-    print("Loading..........")
+
     names, blur_maps, scores, labels = libraryDetection(library)
     print("Done with blur detection!")
     # sort the indices by score.
@@ -167,12 +167,12 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('-i','--images',type=str,required=True,help='directory of images')
     parser.add_argument('-s','--save-path',type=str,help='path to save output')
-    parser.add_argument('-t','--threshold',type=float,help='blurry threshold')
+    parser.add_argument('-t','--threshold',type=float,default=100,nargs="?",help='blurry threshold')
     parser.add_argument('-d','--display',action='store_true',help='display images')
     return parser.parse_args()
 
 if __name__ == '__main__':
     args = vars(parse_args())
-
-
+    print("Loading..........")
+    
     deletion(args['images'])
