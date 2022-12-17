@@ -42,7 +42,7 @@ When this kernel is used in convolution with an image, the output is exactly the
 
 Therefore the concept can be extended to detecting edges in an image, with a kernel filter such as the following: 
 
-![image](images/edge kernel.png)
+![image](images/edge_kernel.png)
 
 Such a filter as the one above would be able to detect edges in a photograph by weighting neighboring pixels inversely with respect to the center pixel. Therefore, the convolution returns greater values for those areas where sharp changes in the image occur, as the kernel effectively accentuates those discontinuities. 
 
